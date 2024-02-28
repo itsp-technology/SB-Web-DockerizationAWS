@@ -1,3 +1,4 @@
 FROM openjdk:17
 COPY target/sb-webapp.jar .
+RUN mvn clean package
 CMD ["java","-jar" , "sb-webapp.jar"]
